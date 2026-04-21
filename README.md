@@ -10,8 +10,8 @@ Currently, the paper is under review. We will make the source code publicly avai
 
 **1. Check Requirements**
 * Linux with Python >= 3.6
-* [PyTorch](https://pytorch.org/get-started/locally/) >= 1.6 & [torchvision](https://github.com/pytorch/vision/) that matches the PyTorch version.
-* CUDA 10.1, 10.2
+* [PyTorch](https://pytorch.org/get-started/locally/) >= 2.0 & [torchvision](https://github.com/pytorch/vision/) that matches the PyTorch version.
+* CUDA 12.1
 * GCC >= 4.9
 
 **2. Build CBYD**
