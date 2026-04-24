@@ -11,7 +11,7 @@ The source code will be made publicly available upon publication at https://gith
 
 **1. Check Requirements**
 * Linux with Python == 3.8
-* PyTorch == 2.3.0 & torchvision == 0.18.1 that matches the PyTorch version.
+* PyTorch == 2.3.0 & torchvision == 0.18.1
 * CUDA 12.1.0
 * GCC == 9.4.0
 **2. Build CBYD**
@@ -56,18 +56,22 @@ The source code will be made publicly available upon publication at https://gith
     |                         [Stanford Cars](http://ai.stanford.edu/~jkrause/cars/car_dataset.html)                          | 1.85GB  |
 - Unzip the downloaded datasets and copy all images into `datasets/datasets/miniIN-coco/miniImageNet-coco/data/`(eg. mini-ImageNet):
   ```angular2html
+    CBYD_Source
     ...
-    datasets
-      | -- datasets
-              | -- miniIN-coco (miniImageNet/data/*.jpg, miniImageNet/miniImageNet-split, miniImageNet/*.json)
-                    | -- miniImageNet-coco
-                            | -- data
-                                    | -- *.jpg
-                    | -- miniImageNet-split
-              | -- tieredImageNet
-              | -- CUB
-              | -- Dogs
-              | -- Cars
+        | -- configs
+        | -- datasets
+                | -- datasets
+                | -- miniIN-coco
+                        | -- miniImageNet-coco
+                                | -- data
+                                        | -- *.jpg
+                        | -- miniImageNet-split
+                | -- tieredImageNet
+                | -- CUB
+                | -- Dogs
+                | -- Cars
+        | -- defrcn
+        | -- tools
     ...
   ```
 * Weights Preparation
