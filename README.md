@@ -86,8 +86,6 @@ For ease of training and evaluation over multiple runs, we integrate the whole p
 
 ## Results on multiple Benchmarks
 
-* mini-ImageNet and tiered-ImageNet
-
 | Dataset         | CBYD 5-way 1-shot | CBYD 5-way 5-shot | CBYD++ 5-way 1-shot | CBYD++ 5-way 5-shot | 
 |:----------------|:------------------|:-----------------:|:-------------------:|:-------------------:| 
 | mini-ImageNet   | 68.85±1.15        |    84.45±0.84     |     85.63±0.99      |     94.80±0.47      | 
@@ -95,7 +93,6 @@ For ease of training and evaluation over multiple runs, we integrate the whole p
 | CUB             | 83.27±1.82        |    94.39±0.61     |     92.03±0.93      |     97.73±0.45      | 
 | Stanford Dogs   | 78.13±1.35        |    88.93±0.89     |     87.49±1.02      |     94.72±0.71      | 
 | Stanford Cars   | 90.48±1.19        |    96.64±0.58     |     90.40±0.87      |     96.29±0.59      | 
-
 
 
 ## Acknowledgement
