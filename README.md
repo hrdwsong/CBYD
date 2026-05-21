@@ -84,7 +84,7 @@ The source code will be made publicly available upon publication at https://gith
 For ease of training and evaluation over multiple runs, we integrate the whole pipeline of few-shot classification into one script `*.sh`, including base pre-training and novel-finetuning.
 * To reproduce the results on mini-ImageNet, `EXP_NAME` can be any string (e.g cbyd, or something):
   ```angular2html
-  miniin_train.sh EXP_NAME
+  bash miniin_train.sh EXP_NAME
   ```
 * Please read the details of pipeline in `*.sh`, you need change `IMAGENET_PRETRAIN*` to your path.
 
