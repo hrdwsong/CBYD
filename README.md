@@ -2,8 +2,6 @@
 
 This repository serves as the official source code for the paper titled "*Explicit Location-Label-Guided Foreground Feature Optimization Learning for Few-Shot Classification*"
 
-The source code will be made publicly available upon publication at https://github.com/hrdwsong/CBYD/tree/main.
-
 <div align="center"><img src="assets/workflow.bmp" width="800"></div>
 <div align="center"><img src="assets/arch.bmp" width="800"></div>
 
@@ -14,6 +12,7 @@ The source code will be made publicly available upon publication at https://gith
 * PyTorch == 2.3.0 & torchvision == 0.18.1
 * CUDA 12.1.0
 * GCC == 9.4.0
+
 **2. Build CBYD**
 * Clone Code
   ```angular2html
@@ -47,13 +46,13 @@ The source code will be made publicly available upon publication at https://gith
 * Data Preparation
   - We evaluate our models on five datasets:
 
-    |                              Dataset                               |  Size   | 
-    |:------------------------------------------------------------------:|:-------:|
-    |  [mini-ImageNet](https://aistudio.baidu.com/datasetdetail/105646)  | 2.88GB  |
-    | [tiered-ImageNet](https://aistudio.baidu.com/datasetdetail/201309) | 28.2GB  |
-    |    [CUB](https://www.vision.caltech.edu/datasets/cub_200_2011/)    | 1.16GB  |
-    | [Stanford Dogs](http://vision.stanford.edu/aditya86/ImageNetDogs/) | 0.753GB |
-    |                         [Stanford Cars](http://ai.stanford.edu/~jkrause/cars/car_dataset.html)                          | 1.85GB  |
+    |                              Dataset                               |  Size   | Image Number |
+    |:------------------------------------------------------------------:|:-------:|:------------:|
+    |  [mini-ImageNet](https://aistudio.baidu.com/datasetdetail/105646)  | 2.88GB  |    60,000    |
+    | [tiered-ImageNet](https://aistudio.baidu.com/datasetdetail/201309) | 28.2GB  |   779,165    |
+    |    [CUB](https://www.vision.caltech.edu/datasets/cub_200_2011/)    | 1.16GB  |    11,788    |
+    | [Stanford Dogs](http://vision.stanford.edu/aditya86/ImageNetDogs/) | 0.753GB |    20,580    |
+    |                         [Stanford Cars](http://ai.stanford.edu/~jkrause/cars/car_dataset.html)                          | 1.85GB  |    16,185    |
 - Unzip the downloaded datasets and copy all images into `datasets/datasets/miniIN-coco/miniImageNet-coco/data/`(eg. mini-ImageNet):
   ```angular2html
     CBYD_Source
@@ -102,4 +101,19 @@ For ease of training and evaluation over multiple runs, we integrate the whole p
 ## Acknowledgement
 This repo is developed based on [DeFRCN](https://github.com/ucbdrive/few-shot-object-detection) and [Detectron2](https://github.com/facebookresearch/detectron2). Please check them for more details and features.
 
+## Citing CBYD
+If you find this repository useful, please consider giving us a star :star: and cite our work:
+```
+@article{SONG2026CBYD,
+title = {Explicit location-label-guided foreground feature optimization learning for few-shot classification},
+journal = {Information Sciences},
+volume = {754},
+pages = {123744},
+year = {2026},
+issn = {0020-0255},
+doi = {https://doi.org/10.1016/j.ins.2026.123744},
+url = {https://www.sciencedirect.com/science/article/pii/S0020025526006754},
+author = {Bin Song and Hong Zhu and Bingxin Wang and Yuandong Bi}
+}
+```
 
