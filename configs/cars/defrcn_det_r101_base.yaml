@@ -1,0 +1,23 @@
+_BASE_: "../Base-RCNN.yaml"
+MODEL:
+  WEIGHTS: ""
+  MASK_ON: False
+  RESNETS:
+    DEPTH: 101
+  RPN:
+    ENABLE_DECOUPLE: True
+    BACKWARD_SCALE: 0.0
+  ROI_HEADS:
+    NUM_CLASSES: 147
+    ENABLE_DECOUPLE: True
+    BACKWARD_SCALE: 0.75
+DATASETS:
+  TRAIN: ('cars_trainval_base',)
+  TEST: ('cars_trainval_base',)
+SOLVER:
+  IMS_PER_BATCH: 8
+  BASE_LR: 0.01
+  STEPS: (85000, 100000)
+  MAX_ITER: 110000
+  CHECKPOINT_PERIOD: 200000
+OUTPUT_DIR: "/Path/to/Output/Dir"

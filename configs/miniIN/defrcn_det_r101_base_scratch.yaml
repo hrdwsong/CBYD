@@ -1,0 +1,27 @@
+_BASE_: "../Base-RCNN.yaml"
+MODEL:
+  WEIGHTS: ""
+  PIXEL_STD: [57.375, 57.12, 58.395]
+  MASK_ON: False
+  BACKBONE:
+    FREEZE_AT: 0
+  RESNETS:
+    DEPTH: 101
+    NORM: "GN"
+  RPN:
+    ENABLE_DECOUPLE: True
+    BACKWARD_SCALE: 0.0
+  ROI_HEADS:
+    NUM_CLASSES: 80
+    ENABLE_DECOUPLE: True
+    BACKWARD_SCALE: 0.75
+DATASETS:
+  TRAIN: ('miniin_trainval_base',)
+  TEST: ('miniin_trainval_base',)
+SOLVER:
+  IMS_PER_BATCH: 4
+  BASE_LR: 0.005
+  STEPS: (600000, 640000)
+  MAX_ITER: 660000
+  CHECKPOINT_PERIOD: 100000
+OUTPUT_DIR: "/Path/to/Output/Dir"

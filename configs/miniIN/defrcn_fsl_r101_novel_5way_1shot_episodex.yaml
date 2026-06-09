@@ -1,0 +1,37 @@
+_BASE_: "../Base-RCNN.yaml"
+MODEL:
+  WEIGHTS: "/Path/to/Base/Pretrain/Weight"
+#  PIXEL_STD: [57.375, 57.12, 58.395]  # for random init pretrained model only!
+  MASK_ON: False
+  BACKBONE:
+    FREEZE: False
+  RESNETS:
+    DEPTH: 101
+#    NORM: "GN"  # for random init pretrained model only!
+  RPN:
+    ENABLE_DECOUPLE: True
+    BACKWARD_SCALE: 0.0
+    FREEZE: False
+  ROI_HEADS:
+    NUM_CLASSES: 5
+    FREEZE_FEAT: True
+    CLS_DROPOUT: True
+    ENABLE_DECOUPLE: True
+    BACKWARD_SCALE: 0.01
+    SCORE_THRESH_TEST: 0.0  # for fsl only!
+    NMS_THRESH_TEST: 0.8  # for fsl only!
+DATASETS:
+  TRAIN: ('miniin_fsl_5way_1shot_support_episodex',)
+  TEST: ('miniin_fsl_5way_1shot_query_episodex',)
+SOLVER:
+  IMS_PER_BATCH: 8   # for imagenet pretrained model.
+#  IMS_PER_BATCH: 4   # for random init pretrained model only!
+  BASE_LR: 0.005
+  STEPS: (1200,)
+  MAX_ITER: 1500
+  CHECKPOINT_PERIOD: 100000
+  WARMUP_ITERS: 0
+TEST:
+  PCB_ENABLE: True   # ----
+  PCB_MODELPATH: "/Path/to/ImageNet/Pre-Train/Weight"
+OUTPUT_DIR: "/Path/to/Output/Dir"
